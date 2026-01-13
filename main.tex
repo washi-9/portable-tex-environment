@@ -1,0 +1,62 @@
+% 1. クラス宣言（LuaLaTeX用に変更）
+\documentclass[autodetect-engine, ja=standard, a4paper]{bxjsarticle}
+
+% 2. 以前の便利なパッケージ群（そのまま活用）
+\geometry{top=20mm,bottom=20mm,left=20mm,right=20mm}
+\usepackage{subcaption}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{float}
+
+\usepackage{listings}
+\lstset{
+  stringstyle={\ttfamily},
+  % inputencoding=utf8, % LuaLaTeXでは標準がUTF-8なので不要
+  commentstyle={\ttfamily\itshape\color{blue}},
+  basicstyle=\ttfamily,
+  columns=[l]{fullflexible},
+  frame={tb,leftline,rightline},
+  breaklines=true,
+  backgroundcolor=\color{gray!14},
+  numbers=left,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=5pt,
+  tabsize=2,
+  lineskip=-0.6ex,
+  keepspaces=true, % スペースを保持
+}
+
+% 3. ドキュメント開始
+\title{新しいLaTeX環境のテスト}
+\author{washi-9}
+\begin{document}
+\maketitle
+
+\section{はじめに}
+このコンテナは環境構築不要で、LuaLaTeXを使った日本語LaTeX文書の作成をサポートします。
+
+\section{コードのテスト}
+LuaLaTeXなら、以下のように日本語コメントを含むコードもきれいに表示されます。
+
+\begin{lstlisting}[caption=テストコード, language=C++]
+#include <iostream>
+using namespace std;
+
+int main() {
+    // 日本語のコメントも文字化けしません
+    cout << "Hello, LuaLaTeX!" << endl;
+    return 0;
+}
+\end{lstlisting}
+
+  \clearpage
+  \begin{thebibliography}{99}
+
+  \bibitem{test} test.
+  \end{thebibliography}
+
+\end{document}
