@@ -36,3 +36,10 @@ code .
 ## 📝 基本的な操作
 - 中間ファイルの削除: エラーでビルドが止まった際は、VS Code のターミナルで latexmk -C を実行してください。
 - パッケージの追加: 特殊なパッケージが必要な場合は、Dockerfile に tlmgr install <パッケージ名> を追記してコンテナを Rebuild してください。
+
+## Topics
+- latex
+- lualatex
+- docker
+- devcontainer
+- vscode
